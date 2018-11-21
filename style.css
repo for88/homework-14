@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'Museo Sans 100 Thin Italic';
+  src: url(fonts/MuseoSansCyrl-100.eot);
+  src: url(font/MuseoSansCyrl-100Italic) format('embedded-opentype'),
+  url(font/MuseoSansCyrl-100.woff) format('woff'),
+  url(fonts/MuseoSansCyrl-100.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+@font-face {
+  font-family: 'Museo Sans 300 Light Italic';
+  src: url(fonts/MuseoSansCyrl-300.eot);
+  src: url('MuseoSansCyrl-300Italic.eot?#iefix') format('embedded-opentype'),
+  url(fonts/MuseoSansCyrl-300.woff) format('woff'),
+  url(fonts/MuseoSansCyrl-300.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+@font-face {
+  font-family: 'Museo Sans 500 Medium Italic';
+  src: url(MuseoSansCyrl-500Italic.eot);
+  src: url('MuseoSansCyrl-500Italic.eot?#iefix') format('embedded-opentype'),
+  url(MuseoSansCyrl-500Italic.woff) format('woff'),
+  url(MuseoSansCyrl-500Italic.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+@font-face {
+  font-family: 'Museo Sans 700 Bold Italic';
+  src: url(MuseoSansCyrl-700Italic.eot);
+  src: url('MuseoSansCyrl-700Italic.eot?#iefix') format('embedded-opentype'),
+  url(MuseoSansCyrl-700Italic.woff) format('woff'),
+  url(MuseoSansCyrl-700Italic.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+@font-face {
+  font-family: 'Museo Sans 900 Black Italic';
+  src: url(fonts/MuseoSansCyrl-900.eot);
+  src: url(fonts/MuseoSansCyrl-900.eot) format('embedded-opentype'),
+  url(fonts/MuseoSansCyrl-900.woff) format('woff'),
+  url(fonts/MuseoSansCyrl-900.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+    body{
+      font-family: "Museo Sans Light", sans-serif;
+      color: #333333; 
+    }
+    .container {
+      width: 1170px;
+      margin: 0 auto;
+    }
+     .header-wrap{
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      align-items: center;
+    }
+    .header-text{
+      display: flex;
+      align-items: center;
+    }
+    .header-text__city{
+      display: block;
+      font-size: 13px;
+      margin-bottom: 9px;
+    }
+    .header-text__contacts{
+      text-align: right;
+      margin-right: 30px;
+    }
+    .header-text__phone{
+      display: block;
+      text-decoration: none;
+      color: #333333;
+      font-family: 'Museo Sans 700 Bold Italic', sans-serif;
+      font-size: 20px;
+    }
+    .button{
+      padding: 17px 30px;
+      font-size: 13px;
+      font-family: 'Museo Sans 700 Bold Italic', sans-serif;
+      border: none;
+      border-radius: 10px;
+      background-color: #ffd200
+    }
+    .button:hover{
+      background-color: #b7eb8d;
+      cursor: pointer;
+    }
+    .button:focus{
+      outline: none;
+    }
+
