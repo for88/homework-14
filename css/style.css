@@ -1,12 +1,21 @@
 @font-face {
-font-family: 'Museo Sans 300 Light Italic';
-src: url(fonts/MuseoSansCyrl-300.eot);
-src: url('MuseoSansCyrl-300Italic.eot?#iefix') format('embedded-opentype'),
-url(fonts/MuseoSansCyrl-300.woff) format('woff'),
-url(fonts/MuseoSansCyrl-300.ttf) format('truetype');
-font-weight: normal;
-font-style: normal;
-}
+  font-family: 'Museo Sans 100 Thin Italic';
+  src: url(fonts/MuseoSansCyrl-100.eot);
+  src: url(font/MuseoSansCyrl-100Italic) format('embedded-opentype'),
+  url(font/MuseoSansCyrl-100.woff) format('woff'),
+  url(fonts/MuseoSansCyrl-100.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+@font-face {
+  font-family: 'Museo Sans 300 Light Italic';
+  src: url(fonts/MuseoSansCyrl-300.eot);
+  src: url('MuseoSansCyrl-300Italic.eot?#iefix') format('embedded-opentype'),
+  url(fonts/MuseoSansCyrl-300.woff) format('woff'),
+  url(fonts/MuseoSansCyrl-300.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
 @font-face {
   font-family: 'Museo Sans 500 Medium Italic';
   src: url(MuseoSansCyrl-500Italic.eot);
@@ -16,18 +25,33 @@ font-style: normal;
   font-weight: normal;
   font-style: normal;
   }
-  @font-face {
-    font-family: 'Museo Sans 700 Bold Italic';
-    src: url(MuseoSansCyrl-700Italic.eot);
-    src: url('MuseoSansCyrl-700Italic.eot?#iefix') format('embedded-opentype'),
-    url(MuseoSansCyrl-700Italic.woff) format('woff'),
-    url(MuseoSansCyrl-700Italic.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    }
+@font-face {
+  font-family: 'Museo Sans 700 Bold Italic';
+  src: url(MuseoSansCyrl-700Italic.eot);
+  src: url('MuseoSansCyrl-700Italic.eot?#iefix') format('embedded-opentype'),
+  url(MuseoSansCyrl-700Italic.woff) format('woff'),
+  url(MuseoSansCyrl-700Italic.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+@font-face {
+  font-family: 'Museo Sans 900 Black Italic';
+  src: url(fonts/MuseoSansCyrl-900.eot);
+  src: url(fonts/MuseoSansCyrl-900.eot) format('embedded-opentype'),
+  url(fonts/MuseoSansCyrl-900.woff) format('woff'),
+  url(fonts/MuseoSansCyrl-900.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+  *, *:after, *:before{
+    box-sizing: border-box;
+  } 
     body{
       font-family: "Museo Sans Light", sans-serif;
       color: #333333; 
+    }
+    img{
+      max-width: 100%;
     }
     .container {
       width: 1170px;
@@ -74,4 +98,157 @@ font-style: normal;
     .button:focus{
       outline: none;
     }
+    .main{
+      background-color: #f5f5f5;
+    }
+    .main-wrap{
+      display: flex;
+    }
+    .main-text{
+      flex-basis: 50%;
+    }
+    .main-img{
+      flex-basis: 50%;
+    }
+    .main-text__title{
+      font-size: 41px;
+      margin-bottom: 50px;
+      line-height: 55px;
+      margin-top: 20px;
+    }
+    .h1-span{
+      font-size: 20px;
+      display: block;
+      margin-top: 20px;
+      font-family: "Museo Sans Cyrl -700";
+    }
+.main-advantages{
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+}
+.main-advantages__item{
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.main-advantages__img{
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ffd200;
+  margin-right: 30px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  
+
+}
+.main-advantages__img-1{
+  background: url('../img/clock.png');
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+.main-advantages__img-2{
+  background: url('../img/calculator.png');
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main-advantages__img-3{
+  background: url('../img/paint-board-and-brush.png');
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.feetback{
+  padding: 94px 0;
+  background: url('../img/feetback-bg.jpg') no-repeat center right -40%;
+}
+.form{
+  max-width: 575px;
+}
+.form__title{
+  font-size: 24px;
+  line-height: 35px;
+  margin-bottom: 45px;
+}
+input{
+  font-size: 15px;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid  #dddddd;
+}
+.input-form{
+  width: 270px;
+  height: 65px;
+  margin-bottom: 30px;
+}
+.input-name{
+  margin-right: 30px;
+}
+.form__subtitle{
+  padding-bottom: 50px;
+  display: block;
+}
+.button-text{
+  font-family: "Museo Sans Cyrl -700";
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  height: 70px;
+  margin-bottom: 31px;
+}
+.form__contact{
+  display: block;
+  width: 210px;
+  height: 39px;
+  color: #333333;
+  font-family: "Museo Sans Cyrl -300";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-right: 78px;
+}
+.inverse{
+  display: flex;
+  justify-content: space-between;
+}
+.form__tel-text{
+  width: 189px;
+  height: 12px;
+  color: #333333;
+  font-family: "Museo Sans Cyrl -300";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.form__tel-tel{
+  display: block;
+  width: 133px;
+  height: 13px;
+  color: #333333;
+  font-family: "Museo Sans Cyrl -700";
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 24px;
+}
+.form__tel-img{
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #cccccc;
+  border-radius: 50%;
+  background: url('../img/phone.png');
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+
+
 
