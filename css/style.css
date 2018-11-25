@@ -281,6 +281,7 @@ input{
 @media (max-width: 1200px){
   body{
   overflow: hidden;
+
   }
  .container{ 
    width: 900px;
@@ -290,29 +291,17 @@ input{
    justify-content:center;
  }
  .container-main{
+  background: #ffffff;
    width: 980px;
- }
- .main-img{
-   margin-left: 0;
-   padding-bottom: 10px;
-   transform: scale(1.0);
- }
- .main-wrap{
-   width: 980px;
-   display: block;
-   margin-bottom: 500px;
- }
- .main-text{
-  max-width: 980px;
- }
- .main-text__title{
-   font-size: 35px;
  }
  .img-form{
    width: 0%;
  }
 }
 @media (max-width: 992px){
+  .body{
+    overflow: hidden;
+  }
   .container{ 
     width: 767px;
   }
@@ -323,163 +312,45 @@ input{
   .container-main{
     width: 767px;
   }
-  .main-img{
-    margin-left: 0;
-    padding-bottom: 5px;
-    transform: scale(1.0);
-  }
-  .main-wrap{
-    width: 767px;
-    display: block;
-    margin-bottom: 500px;
-  }
-  .main-text{
-   max-width: 767px;
-  }
-  .main-text__title{
-    font-size: 35px;
-  }
-  .img-form{
-    width: 0%;
-  }
- }
+}
  @media (max-width: 768px){
-  .header-wrap{
-    display: block;
-    width: 70%;
-    text-align: center;
-    margin-bottom: 150px;
-  }
-  .header-text__contacts{
-    display: block;
-    width: 70%;
-    text-align: center;
-  }
-  .container-main{
-    display: block;
-    width: 70%;
-    text-align: center;
-  }
-  .main-img{
-    padding-bottom: 5px;
-    transform: scale(1.0);
-  }
-  .main-wrap{
-    display: block;
-    width: 90%;
-    text-align: center;
-    margin-bottom: 200px;
-  }
-  .main-text{
-   max-width: 70%;
-  }
-  .main-text__title{
-    font-size: 29px;
-    text-align: center;
-  }
-  .img-form{
-    width: 0%;
-  }
-  .form-form{
-    width: 90%;
-    display: block;
-    text-align: center;
-    margin-left: 70px;
-  }
-  .button-text{
-    max-width: 50%;
-    margin: 0 auto;
-  }
-  .inverse{
-    margin-top: 50px;
-  }
- }
- 
- @media (max-width: 576px){
-  .header-wrap{
-    display: block;
+  .main-img {
     width: 60%;
-    text-align: center;
-    margin-bottom: 150px;
+    position: absolute;
   }
-  .header-text{
-    display: block;
+  .main-text__title {
+    font-size: 25px;
     width: 100%;
-    text-align: center;
-    margin: 0 auto;
   }
-  .header-text__contacts{
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
+  .main-advantages {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
   }
-  .button{
-    display: block;
-  }
-  .container-main{
-    display: block;
-    width: 90%;
-    text-align: center;
-  }
-  .main-img{
-    padding-bottom: 5px;
-    transform: scale(1.0);
-  }
+  .form {
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
   .main-wrap{
     display: block;
     width: 90%;
     text-align: center;
     margin-bottom: 400px;
   }
-  .main-text__title{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
   .img-form{
     width: 0%;
   }
-  .container{
-    display: block;
-    width: 90%;
-    text-align: center;
-    margin: 0;
+}
+ @media (max-width: 576px){
+  .body{
+    overflow: hidden;
   }
-  .form__title{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .form-form{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .form__subtitle{
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .button-text{
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  .inverse{
-    display: block;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-  }
-  .form__tel-img{
-    display: none;
-  }
- }
- @media (max-width: 320px){
   .header-wrap{
     display: block;
-    width: 70%;
+    width: 60%;
     text-align: center;
     margin-bottom: 150px;
   }
@@ -491,60 +362,129 @@ input{
   }
   .header-text__contacts{
     display: block;
-    width: 70%;
+    width: 90%;
     text-align: center;
+    margin-bottom: 10px;
   }
   .button{
     display: block;
+    margin: 0 auto;
   }
-  .container-main{
-    display: block;
-    width: 70%;
-    text-align: center;
-  }
-  .main-img{
-    padding-bottom: 5px;
-    transform: scale(1.0);
-  }
-  .main-wrap{
-    display: block;
-    width: 70%;
-    text-align: center;
-    margin-bottom: 500px;
-  }
-  .main-text{
-   max-width: 70%;
-  }
-  .main-text__title{
+  .main-text__title {
     font-size: 20px;
-    text-align: center;
-  }
-  .img-form{
-    width: 0%;
-  }
-  .container{
-    display: block;
-    width: 70%;
-    text-align: center;
-    margin: 0;
+    width: 90%;
   }
   .form__title{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 150px;
+    font-size: 15px;
+    width: 70%;
+    margin-bottom: 50px;
   }
-  .button-text{
+  .form-form{
+    display: block;
     max-width: 100%;
     margin: 0 auto;
   }
-  .inverse{
-    display: block;
-    width: 60%;
+  .form__subtitle{
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .input{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-right: 300px;
+  }
+  .inverse{
+    display: block;
+  }
+  .form__contact{
+    width: 100%;
+    margin-top: 25px;
+    margin-right: 200px;
+  }
+  .form__tel{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 25px;
+    margin-right: 200px;
   }
   .form__tel-img{
     display: none;
   }
+  .button-text{
+    max-width: 50%;
+    margin-right: 280px;
+  }
  }
+ @media (max-width: 320px){
+  .header-text__phone{
+    display: block;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 10px;
+  }
+  .main-text__title {
+    font-size: 15px;
+    width: 48%;
+  }
+  .h1-span{
+    font-size: 14px;
+    width: 92%;
+  }
+  .main-advantages{
+    margin: 0 0;
+    width: 70%;
+    font-size: 15px;
+  }
+  .main-advantages__item{
+    width: 80%;
+  }
+ .main-wrap{
+   margin-bottom: 150px;
+ }
+ .form{
+  margin: 0 0;
+  width: 80%;
+ }
+ .form__title{
+   font-size: 15px;
+   width: 50%;
+   text-align: center;
+ }
+ .form__subtitle{
+  font-size: 14px;
+  width: 50%;
+  margin-left: 0;
+  text-align: center;
+ }
+ .form__contact{
+  font-size: 16px;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 10px;
+ }
+ .button-text{
+   font-size: 12px;
+ }
+ .form__tel{
+   display: block;
+ }
+ .form__tel-text{
+   display: block;
+   width: 50%;
+   text-align: center;
+   margin-bottom: 10px;
+ }
+ .form__tel-tel{
+   display: block;
+   width: 50%;
+   text-align: center;
+ }
+
+
+ }
+  
+
