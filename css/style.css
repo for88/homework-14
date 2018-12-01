@@ -908,6 +908,20 @@ input{
 .symbol:hover{
   background-color: #b7eb8d;
 }
+@media (max-width: 1200px){
+  .modal{
+    width: 100%;
+  }
+  .modal__dialog{
+    width: 100%;
+  }
+  .modal-left{
+    width: 100%;
+  }
+  .modal-right{
+    width: 100%;
+  }
+}
 @media (max-width: 992px){
  .modal{
    width: 100%;
@@ -975,37 +989,34 @@ input{
   .input-form{
     padding: 5px 5px;
   }
-  @media (max-width: 320px){
-    .p, .next, .size, .cost{
-      font-size: 10px;
-    }
-    .service-h2{
-      font-size: 10px;
-      margin: 5px;
-    }
-    ul{
-      font-size: 8px;
-    }
-
-    .modal-h2, .modal-p{
-      font-size: 12px;
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto; 
-    }
-    .input-form{
-      width: 50%;
-    }
-    .modal-button{
-      width: 50%;
-    }
-    .modal-feedback{
-      font-size: 12px;
-    }
-
-
-    
-  }
+ 
  }
+ @media (max-width: 320px){
+  .p, .next, .size, .cost{
+    font-size: 10px;
+  }
+  .service-h2{
+    font-size: 10px;
+    margin: 5px;
+  }
+  ul{
+    font-size: 8px;
+  }
+  .modal-h2, .modal-p{
+    font-size: 12px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto; 
+  }
+  .input-form{
+    width: 50%;
+  }
+  .modal-button{
+    width: 50%;
+  }
+  .modal-feedback{
+    font-size: 12px;
+  }
+}
 
   
