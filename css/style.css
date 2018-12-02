@@ -19,7 +19,7 @@
 @font-face {
   font-family: 'Museo Sans 500 Medium Italic';
   src: url(../fonts/MuseoSansCyrl-500Italic.eot);
-  src: url(../fonts/MuseoSansCyrl-700Italic.eot) format('embedded-opentype'),
+  src: url(../fonts/MuseoSansCyrl-500Italic.eot) format('embedded-opentype'),
   url(../fonts/MuseoSansCyrl-500Italic.woff) format('woff'),
   url(../fonts/MuseoSansCyrl-500Italic.ttf) format('truetype');
   font-weight: normal;
@@ -115,7 +115,7 @@
     h1{
       width: 462px;
       color: #333333;
-      font-family: "Museo Sans Cyrl -700";
+      font-family: "Museo Sans Cyrl -700", sans-serif;
       font-size: 41px;
       font-weight: 400;
       line-height: 55px;
@@ -138,7 +138,7 @@
       font-size: 20px;
       display: block;
       margin-top: 20px;
-      font-family: "Museo Sans Cyrl -700";
+      font-family: "Museo Sans Cyrl -700", sans-serif;
     }
 .main-advantages{
   display: flex;
@@ -151,10 +151,9 @@
   margin-bottom: 30px;
 }
 .main-advantages__text{
-  font-family : «Museo Sans Cyrl -300»;
+  font-family : "Museo Sans Cyrl -300", sans-serif;
 
 }
-
 .main-advantages__img{
   min-width: 40px;
   height: 40px;
@@ -190,7 +189,7 @@
 .img-form{
   flex-basis: 50%;
   transform-origin: left top;
-  transform: scale(1.6);
+  transform: scale(1.5);
   position: relative;
   padding-left: 100px;
 }
@@ -207,7 +206,7 @@
   width: 506px;
   height: 59px;
   color: #333333;
-  font-family: "Museo Sans Cyrl -700";
+  font-family: "Museo Sans Cyrl -700", sans-serif;
   font-size: 24px;
   font-weight: bold;
   line-height: 35px;
@@ -219,7 +218,7 @@ input{
   border-radius: 10px;
   background-color: #ffffff;
   border: 1px solid  #dddddd;
-  font-family : «Museo Sans Cyrl -300»;
+  font-family : "Museo Sans Cyrl -300", sans-serif;
 }
 .input-form{
   width: 270px;
@@ -232,12 +231,13 @@ input{
 .form__subtitle{
   padding-bottom: 50px;
   display: block;
-  font-family : «Museo Sans Cyrl -300»;
-  
+  font-family : "Museo Sans Cyrl -300", sans-serif;
 }
 .button-text{
-  font-family: "Museo Sans Cyrl -700";
+  font-family: "Museo Sans Cyrl -700", sans-serif;
   font-size: 16px;
+  font-weight: 400;
+  color: #333333;
   display: block;
   width: 100%;
   height: 70px;
@@ -248,7 +248,7 @@ input{
   width: 210px;
   height: 39px;
   color: #333333;
-  font-family: "Museo Sans Cyrl -300";
+  font-family: "Museo Sans Cyrl -300", sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
@@ -262,7 +262,7 @@ input{
   width: 189px;
   height: 12px;
   color: #333333;
-  font-family: "Museo Sans Cyrl -300";
+  font-family: "Museo Sans Cyrl -300", sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
@@ -272,7 +272,7 @@ input{
   width: 133px;
   height: 13px;
   color: #333333;
-  font-family: "Museo Sans Cyrl -700";
+  font-family: "Museo Sans Cyrl -700", sans-serif;
   font-size: 15px;
   font-weight: bold;
   line-height: 24px;
@@ -287,6 +287,7 @@ input{
   background-size: 16px;
   background-repeat: no-repeat;
   background-position: center;
+  margin-right: 20px;
 }
 @media (max-width: 1200px){
   body{
@@ -303,10 +304,20 @@ input{
    width: 900px;
  }
  .img-form{
-   width: 0%;
+   width: 100%;
+   right: 150px;
+   top: 150px;
+ }
+ .button-text{
+   width: 80%;
+   margin: 10px auto;
  }
  .main-img{
   width: 90%;
+}
+.slider__item{
+  width: 90%;
+  padding-right: 30px; 
 }
 }
 @media (max-width: 992px){
@@ -331,6 +342,11 @@ input{
   .main-img {
     padding-top: 50px;
     width: 95%;
+  }
+  .img-form{
+    width: 100%;
+    right: 150px;
+    top: 150px;
   }
 }
  @media (max-width: 768px){
@@ -357,9 +373,8 @@ input{
     direction: center;
     transform: scale(1.0);
     height: 85%;
-    margin-left: 30px;
-    margin-right: 5px;
-    width: 80%
+    margin: auto;
+    width: 90%
   }
   .main-text__title {
     font-size: 25px;
@@ -383,6 +398,20 @@ input{
     width: 90%;
     text-align: center;
     margin-bottom: 400px;
+  }
+  .img-form{
+    width: 0;
+  }
+  .slider{
+    width: 100%;
+  }
+  .slider__item{
+    width: 100%;
+    margin: auto; 
+  }
+  .slider__item img{
+    max-width: 90%;
+    margin: auto;
   }
 }
  @media (max-width: 576px){
@@ -747,10 +776,13 @@ input{
    .modal__dialog{
      display: flex;
      margin: auto;
-     width: 1170px;
-     height: 674px;
+     max-width: 1170px;
+     max-height: 674px;
      background-color: #ffffff;
-     position: relative;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%,-50%);
    }
    .modal-left{
     flex-basis: 50%;
@@ -798,15 +830,15 @@ input{
    .p{
      height: 12px;
      color: #000000;
-     font-family: "Museo Sans Cyrl -500";
+     font-family: "Museo Sans Cyrl -500", sans-serif;
      font-size: 16px;
-     font-weight: bold;
+     font-weight: 400;
    }
    .size{
     width: 163px;
     height: 39px;
     color: #000000;
-    font-family: "Museo Sans Cyrl -300";
+    font-family: "Museo Sans Cyrl -300", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
@@ -815,7 +847,7 @@ input{
     width: 163px;
     height: 39px;
     color: #000000;
-    font-family: "Museo Sans Cyrl 700";
+    font-family: "Museo Sans Cyrl 700", sans-serif;
     font-size: 16px;
     font-weight: 700;
    }
@@ -830,14 +862,15 @@ input{
     width: 180px;
     height: 14px;
     color: #000000;
-    font-family: "Museo Sans Cyrl -700";
+    font-family: "Museo Sans Cyrl -700", sans-serif;
     font-size: 14px;
     font-weight: bold;
   }
 
    ul {
     list-style: none;
-    font-family: 'Museo Sans Cyrl 700';
+    color: #000000;
+    font-family: "Museo Sans Cyrl -300", sans-serif;
     font-size: 14px;
     font-weight: 400;
 }
@@ -849,6 +882,7 @@ input{
     width: 7px;
     height: 7px;
     padding-right: 14px;
+    font-size: 20px;
 }
 .modal-h2{
   margin-left: 50px;
@@ -856,9 +890,9 @@ input{
   width: 300px;
   height: 54px;
   color: #333333;
-  font-family: "Museo Sans Cyrl -700";
+  font-family: "Museo Sans Cyrl -700", sans-serif;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 33px;
   text-align: center;
 }
@@ -868,7 +902,7 @@ input{
  width: 331px;
  height: 12px;
  color: #333333;
- font-family: "Museo Sans Cyrl -300";
+ font-family: "Museo Sans Cyrl -300", sans-serif;
  font-size: 16px;
  font-weight: 400;
  line-height: 35px;
@@ -879,7 +913,7 @@ input{
  width: 271px;
  height: 35px;
  color: #333333;
- font-family: "Museo Sans Cyrl -300";
+ font-family: "Museo Sans Cyrl -300", sans-serif;
  font-size: 15px;
  font-weight: 400;
  line-height: 20px;
@@ -888,7 +922,7 @@ input{
  width: 211px;
  height: 21px;
  color: #333333;
- font-family: "Museo Sans Cyrl -700";
+ font-family: "Museo Sans Cyrl -700", sans-serif;
  font-size: 24px;
  font-weight: 700;
  line-height: 24px;
@@ -896,7 +930,7 @@ input{
 .modal__close{
  cursor: pointer;
  position: absolute;
- top: 15px;
+ top: 55px;
  right: 15px;
 }
 .symbol{
@@ -913,7 +947,8 @@ input{
     width: 100%;
   }
   .modal__dialog{
-    width: 100%;
+    width: 90%;
+    height: 90%;
   }
   .modal-left{
     width: 100%;
@@ -927,13 +962,18 @@ input{
    width: 100%;
  }
  .modal__dialog{
-   width: 100%;
- }
+  width: 100%;
+  height: 100%;
+}
  .modal-left{
    width: 100%;
  }
  .modal-right{
    width: 100%;
+ }
+ .modal__close{
+  position: absolute;
+  top: 10px;
  }
 }
 @media (max-width: 768px){
@@ -942,6 +982,7 @@ input{
   }
   .modal__dialog{
     width: 100%;
+    height: 100%;
   }
   .modal-left{
     width: 100%;
@@ -960,63 +1001,396 @@ input{
   .modal-tel{
     font-size: 18px;
   }
+  .modal__close{
+    position: absolute;
+    top: 10px;
+  }
  }
 @media (max-width: 576px){
   .modal{
     width: 100%;
   }
   .modal__dialog{
-    width: 100%;
-    height: 1100px;
-    
-  }
-  .modal__dialog{
+    width: 90%;
+    height: 90%;
     display: block;
   }
   .modal-left{
     width: 100%;
-    padding: 35px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .m-img{
+    display: none;
+  }
+  .item{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: baseline;
+    text-align: center;
+    margin-top: 25px;
+  }
+  .yellow-line{
+    margin: auto;
+  }
+  .price{
+    margin: auto;
+    height: 25px;
+  }
+  .cost, .size{
+    font-size: 12px;
+    height: 25px;
+  }
+  .modal-service{
+   margin-left: 60px;
+   margin-right: 60px;
+   width: 100%;
+  
   }
   .modal-right{
     width: 100%;
-    padding: 25px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
-  .modal-h2{
-    font-size: 15px;
-    margin: 5px;
-    width: 100%;
-  }
-  .input-form{
-    padding: 5px 5px;
-  }
- 
- }
- @media (max-width: 320px){
-  .p, .next, .size, .cost{
-    font-size: 10px;
+  .p, .next{
+    font-size: 12px;
   }
   .service-h2{
-    font-size: 10px;
+    font-size: 12px;
     margin: 5px;
   }
   ul{
-    font-size: 8px;
+    font-size: 12px;
   }
-  .modal-h2, .modal-p{
+  .modal-h2{
     font-size: 12px;
     width: 90%;
+    margin-bottom: 0;
+    height: 35px;
     margin-left: auto;
     margin-right: auto; 
+    line-height: 15px;
+  }
+  .modal-p{
+    font-size: 12px;
+    width: 90%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto; 
+    line-height: 15px;
+  }
+  .modal-feedback{
+    margin-top: 5px;
+  }
+  .modal-text{
+    height: 2px;
   }
   .input-form{
-    width: 50%;
+    width: 90%;
   }
   .modal-button{
-    width: 50%;
+    width: 90%;
   }
   .modal-feedback{
     font-size: 12px;
   }
+  li::before{
+    margin-bottom: 5px;
+  }
+  .symbol{
+    padding: 3px;
+  }
+  .yellow-line{
+    width: 50px;
+  }
+  .modal__close{
+    position: absolute;
+    top: 10px;
+  }
+ }
+ @media (max-width: 320px){
+  .modal{
+    width: 100%;
+    height: 100%;
+  }
+  .modal__dialog{
+    width: 90%;
+    height: 90%;
+  }
+  .modal-left{
+    width: 100%;
+    padding: 10px;
+  }
+  .m-img{
+    display: none;
+  }
+  .item{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: baseline;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .yellow-line{
+    margin: auto;
+  }
+  .price{
+    margin: auto;
+    height: 15px;
+  }
+  .cost, .size{
+    font-size: 8px;
+    height: 15px;
+  }
+  .modal-service{
+   margin: auto;
+   max-width: 70%;
+  }
+  .modal-right{
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .p, .next{
+    font-size: 10px;
+  }
+  .service-h2{
+    font-size: 10px;
+    margin-top: 5px;
+  }
+  ul{
+    font-size: 10px;
+    max-width: 90%;
+  }
+  .modal-h2{
+    font-size: 10px;
+    width: 90%;
+    margin-bottom: 0;
+    height: 15px;
+    margin-left: auto;
+    margin-right: auto; 
+    line-height: 10px;
+  }
+  .modal-p{
+    font-size: 10px;
+    width: 90%;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto; 
+    line-height: 10px;
+  }
+  .modal-feedback{
+    margin-top: 5px;
+  }
+  .modal-text{
+    height: 2px;
+  }
+  .input-form{
+    width: 70%;
+    padding: 10px 10px;
+  }
+  .modal-button{
+    width: 70%;
+  }
+  .modal-feedback{
+    font-size: 10px;
+    margin-bottom: 25px;
+  }
+  li::before{
+    margin-bottom: 5px;
+  }
+  .symbol{
+    padding: 1px;
+    font-size: 5px;
+  }
+  .yellow-line{
+    width: 50px;
+  }
+  .modal__close{
+    position: absolute;
+    top: 10px;
+  }
 }
+
+.portfolio{
+  background-color: #f5f5f5;
+  padding: 100px 0;
+  background-image: url(../slide-img/Прямоугольник_1_копия_5.png);
+  background-size: 55.5% 100%;
+  background-repeat: no-repeat;
+}
+
+.section-title{
+  color: #333333;
+  font-family: "Museo Sans Cyrl -700", sans-serif;
+  font-size: 30px;
+  font-weight: 400; 
+  line-height: 45px;
+  margin-bottom: 99px;
+}
+.section-title_center{
+  text-align: center;
+}
+.c-slider{
+  max-width: 1170px;
+}
+.slider__item{
+  text-align: center;
+  margin: auto;
+}
+.arrow{
+  width: 45px;
+  height: 19px;
+  position: absolute;
+  bottom: -68px;
+}
+.arrow:hover{
+  cursor: pointer;
+}
+.arrow_right{
+  left: 50%;
+  background: url(../slide-img/right-arrow.png) no-repeat center;
+  background-size: 100%;
+  transform: translateX(15px);
+}
+.arrow_left{
+  left: 50%;
+  transform: translateX(-45px);
+  background: url(../slide-img/left-arrow.png) no-repeat center;
+  background-size: 100%;
+  margin-left: -15px;
+}
+@media (max-width: 768px){
+  .portfolio{
+    width: 100%;
+    margin: auto;
+  }
+  .section-title{
+    font-size: 20px;
+    width: 90%;
+    text-align: center;
+  }
+  .slider__item{
+    width: 100%;
+    margin: auto;
+
+  }
+}
+@media (max-width: 600px){
+  .portfolio{
+    width: 100%;
+    margin: auto;
+  }
+  .section-title{
+    font-size: 20px;
+    width: 70%;
+    text-align: center;
+  }
+  .slider{
+    width: 50%;
+    margin: 0 100px;
+    text-align: center;
+
+  }
+}
+@media (max-width: 524px){
+  .portfolio{
+    width: 100%;
+    margin: auto;
+  }
+  .section-title{
+    font-size: 18px;
+    width: 70%;
+    text-align: center;
+  }
+  .slider{
+    width: 50%;
+    margin: 0 100px;
+    text-align: center;
+  }
+}
+@media (max-width: 481px){
+  .portfolio{
+    width: 100%;
+    margin: auto;
+    padding-top: 45px;
+  }
+  .c-slider{
+    max-width: 100%;
+  }
+  .section-title{
+    font-size: 15px;
+    width: 80%;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 50px;
+  }
+  .slider__item{
+    padding-right: 0;
+  }
+  .slider{
+    transform: translateX(25px);
+  }
+  .slider__item img{
+    max-width: 100%;
+    margin: auto;
+  }
+  .arrow{
+    margin-top: 10px;
+    width: 10%;
+  }
+  .arrow_right{
+    transform: translateX(25px);
+  }
+  .arrow_left{
+    margin-left: 5px;
+  }
+}
+@media (max-width: 320px){
+  .portfolio{
+    width: 100%;
+    margin: auto;
+    padding-top: 45px;
+  }
+  .c-slider{
+    max-width: 100%;
+  }
+  .section-title{
+    font-size: 10px;
+    width: 80%;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 15px;
+  }
+  .slider__item{
+    padding-right: 0;
+  }
+  .slider{
+    transform: translateX(-15px);
+  }
+  .slider__item img{
+    max-width: 100%;
+    margin: auto;
+  }
+  .arrow{
+    bottom: -35px;
+    width: 10%;
+  }
+  .arrow_right{
+    transform: translateX(5px);
+  }
+  .arrow_left{
+    margin-left: 5px;
+  }
+}
+
+
 
   

@@ -7,6 +7,7 @@
   <title>Ремонт квартир</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slick.css">
 </head>
 <body>
   <header class="header">
@@ -78,7 +79,7 @@
           <span class="form__subtitle">Оставьте заявку на разработку бесплатного дизайн-проекта!</span>
           <form action="">
             <input type="text" class="input input-form input-name" placeholder="Ваше имя">
-            <input type="tel" class="input input-form input-tel" placeholder="Ваш телефон   +7-xxx-xx-xx-xxx" pattern="\+7\s?[\(]{0,1}9[0-9]{3}[\)]{0,1}\s?\d{2}[-]{0,1}\d{2}[-]{0,1}\d{3}">
+            <input type="tel" class="input input-form input-tel" placeholder="Ваш телефон" pattern="\+7\s?[\(]{0,1}9[0-9]{3}[\)]{0,1}\s?\d{2}[-]{0,1}\d{2}[-]{0,1}\d{3}">
             <button type="submit" class="button button-text">Получить бесплатный дизайн-проект</button>
           </form>
           <div class="inverse">
@@ -102,44 +103,48 @@
     <div class="modal__dialog" >
         <div class="modal__close"><span class="symbol">&#10006;</span></div>
         <div class="modal-left">
-          <div class="item-card modal-1">
-            <img class="m-img" src="modal-img/m1.png" alt="">
-            <div class="item-name">
-                <p class="p">Ванная комната</p>
-                <div class="yellow-line"></div>
-                 <div class="price">
-                    <span class="size">135*150 - </span> 
-                    <span class="cost">31 000 руб.</span> 
-                 </div>
-                 <div class="price">
-                    <span class="size"> 170*170 - </span> 
-                    <span class="cost">43 000 руб.</span>
-                 </div>
-            </div>  
-          </div>
-          <div class="item-card modal-2">
-              <img class="m-img" src="modal-img/m2.png" alt="">
-              <div class="item-name">
-                  <p class="next">Туалет</p>
-                  <div class="yellow-line"></div>
-                  <div class="price">
-                      <span class="size">135*70 - </span> 
-                      <span class="cost">14 000 руб.</span>
-                      
-                  </div>
-              </div>
-          </div>  
-          <div class="item-card modal-3">
-              <img class="m-img" src="modal-img/m3.png" alt="">
-              <div class="item-name">
-                  <p class="next p">Совмещенный санузел</p>
-                  <div class="yellow-line"></div>
-                  <div class="price">
-                      <span class="size">170*210 - </span> 
-                      <span class="cost">54 000 руб.</span>  
-                  </div>
-              </div>
-          </div>
+            <div class="item">
+                    <div class="item-card modal-1">
+                            <img class="m-img" src="modal-img/m1.png" alt="">
+                            <div class="item-name">
+                                    <p class="p">Ванная комната</p>
+                                    <div class="yellow-line"></div>
+                                    <div class="price">
+                                        <span class="size">135*150 - </span> 
+                                        <span class="cost">31 000 руб.</span> 
+                                    </div>
+                                    <div class="price">
+                                        <span class="size"> 170*170 - </span> 
+                                        <span class="cost">43 000 руб.</span>
+                                    </div>
+                            </div>  
+                          </div>
+                          <div class="item-card modal-2">
+                              <img class="m-img" src="modal-img/m2.png" alt="">
+                              <div class="item-name">
+                                  <p class="next p">Туалет</p>
+                                  <div class="yellow-line"></div>
+                                  <div class="price">
+                                      <span class="size">135*70 - </span> 
+                                      <span class="cost">14 000 руб.</span>
+                                      
+                                  </div>
+                              </div>
+                          </div>  
+                          <div class="item-card modal-3">
+                              <img class="m-img" src="modal-img/m3.png" alt="">
+                              <div class="item-name">
+                                  <p class="next p">Совмещенный санузел</p>
+                                  <div class="yellow-line"></div>
+                                  <div class="price">
+                                      <span class="size">170*210 - </span> 
+                                      <span class="cost">54 000 руб.</span>  
+                                  </div>
+                              </div>
+                          </div>
+
+            </div>
+          
           <div class="modal-service">
             <h2 class="service-h2">В стоимость работ входит</h2>
             <div class="service">
@@ -159,7 +164,7 @@
               <h2 class="modal-h2">Узнайте точную стоимость ремонта по телефону!</h2>
                   <p class="modal-p">Заполните поля ниже - мы свяжемся с Вами</p>
                   <input type="text" class="input input-form input-name" placeholder="Ваше имя">
-                  <input type="tel" class="input input-form input-tel" placeholder="Ваш телефон   +7-xxx-xx-xx-xxx" pattern="\+7\s?[\(]{0,1}9[0-9]{3}[\)]{0,1}\s?\d{2}[-]{0,1}\d{2}[-]{0,1}\d{3}">
+                  <input type="tel" class="input input-form input-tel" placeholder="Ваш телефон" pattern="\+7\s?[\(]{0,1}9[0-9]{3}[\)]{0,1}\s?\d{2}[-]{0,1}\d{2}[-]{0,1}\d{3}">
                   <button type="submit" class="button button-text modal-button">Узнать стоимость</button>
                   <div class="modal-feedback">
                       <span class="modal-feedback modal-text">
@@ -174,8 +179,58 @@
     
         </div>
 </div>
-
+<section class="portfolio">
+    <div class="container c-slider">
+        <h2 class="section-title section-title_center">
+            Работая с 2007 года, <br>
+            мы сделали более 500 ремонтов в квартирах и домах
+        </h2>
+        <div class="slider">
+            <div class="slider__item arrow_right-img arrow_left-img"><img src="slide-img/one.png" alt=""></div>
+            <div class="slider__item arrow_right-img arrow_left-img"><img src="slide-img/two.png" alt=""></div>
+            <div class="slider__item arrow_right-img arrow_left-img"><img src="slide-img/three.png" alt=""></div>
+            <div class="slider__item arrow_right-img arrow_left-img"><img src="slide-img/one.png" alt=""></div>
+            <div class="slider__item arrow_right-img arrow_left-img"><img src="slide-img/two.png" alt=""></div>
+            <div class="slider__item arrow_right-img arrow_left-img"><img src="slide-img/three.png" alt=""></div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+  $('.slider'). slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: '<div class="arrow arrow_right arrow_right-img"></div>',
+    prevArrow: '<div class="arrow arrow_left arrow_left-img"></div>',
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 720,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+});
+</script>
 <script>
     $(document).ready(function () {
         $('.modal__close').on('click', function(){
